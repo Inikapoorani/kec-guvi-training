@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - KEC-GUVI Industrial Training</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <span class="logo-text">KEC-GUVI</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li id="dashboardLink" style="display: none;"><a href="dashboard.html">Dashboard</a></li>
+                <li id="logoutLink" style="display: none;"><a href="#" id="logoutBtn" class="auth-btn">Logout</a></li>
+                <li id="loginLink"><a href="login.html" class="auth-btn">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Page Header -->
+        <section class="page-header">
+            <h1>Contact Us</h1>
+            <p>Get in touch with our team</p>
+        </section>
+
+        <div class="contact-content">
+            <!-- Contact Information -->
+            <div class="contact-info-section">
+                <div class="contact-info-card">
+                    <h3>📍 Address</h3>
+                    <p>Kongu Engineering College</p>
+                    <p>Perundurai, Erode-638060</p>
+                    <p>Tamil Nadu, India</p>
+                </div>
+
+                <div class="contact-info-card">
+                    <h3>📞 Phone</h3>
+                    <p>+91-XXXXX-XXXXX</p>
+                    <p>+91-XXXXX-XXXXX</p>
+                </div>
+
+                <div class="contact-info-card">
+                    <h3>📧 Email</h3>
+                    <p>info@kec-guvi.com</p>
+                    <p>training@kec-guvi.com</p>
+                </div>
+
+                <div class="contact-info-card">
+                    <h3>🕐 Business Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+                    <p>Saturday: 10:00 AM - 2:00 PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-section">
+                <h2>Send us a Message</h2>
+                <form id="contactForm" class="form">
+                    <div class="form-group">
+                        <label for="contactName">Your Name *</label>
+                        <input type="text" id="contactName" name="name" placeholder="Enter your full name" required>
+                        <span class="error" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactEmail">Email Address *</label>
+                        <input type="email" id="contactEmail" name="email" placeholder="Enter your email" required>
+                        <span class="error" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactPhone">Phone Number</label>
+                        <input type="tel" id="contactPhone" name="phone" placeholder="Enter your phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactSubject">Subject *</label>
+                        <select id="contactSubject" name="subject" required>
+                            <option value="">Select Subject</option>
+                            <option value="course-inquiry">Course Inquiry</option>
+                            <option value="technical-support">Technical Support</option>
+                            <option value="registration-issue">Registration Issue</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="error" id="subjectError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactMessage">Message *</label>
+                        <textarea id="contactMessage" name="message" placeholder="Enter your message" rows="6" required></textarea>
+                        <span class="error" id="messageError"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h4>How do I register for a course?</h4>
+                    <p>Sign up on our website, login to your dashboard, navigate to courses, and click "Register" on your chosen course.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can I register for multiple courses?</h4>
+                    <p>No, you can register for only one course at a time. However, you can change your course after completing it.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>When will the training start?</h4>
+                    <p>After registration, your assigned trainer will contact you with the schedule within 2-3 business days.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Is there a fee for the training?</h4>
+                    <p>This program is provided as part of the KEC-GUVI collaboration for eligible KEC students. Contact us for more details.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">✓ Message Sent Successfully</div>
+            <div class="modal-body">
+                <p>Thank you for contacting us!</p>
+                <p>We will get back to you soon.</p>
+            </div>
+            <button class="btn btn-primary" onclick="document.getElementById('successModal').style.display='none'">Close</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 KEC-GUVI Industrial Training Program. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/validation.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

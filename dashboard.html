@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - KEC-GUVI Industrial Training</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <span class="logo-text">KEC-GUVI</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="#" id="logoutBtn" class="auth-btn">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <h1>Welcome, <span id="studentName"></span>!</h1>
+            <p>Your industrial training program dashboard</p>
+        </section>
+
+        <!-- Dashboard Grid -->
+        <div class="dashboard-grid">
+            <!-- Registered Course Card -->
+            <div class="dashboard-card">
+                <h3>Registered Course</h3>
+                <div id="registeredCourse" class="course-info">
+                    <p class="no-data">No course registered yet</p>
+                </div>
+                <a href="courses.html" class="btn btn-secondary btn-small">Browse Courses</a>
+            </div>
+
+            <!-- Training Schedule Card -->
+            <div class="dashboard-card">
+                <h3>Training Schedule</h3>
+                <div id="trainingSchedule" class="schedule-info">
+                    <p class="no-data">Schedule will appear after course registration</p>
+                </div>
+            </div>
+
+            <!-- Quick Stats Card -->
+            <div class="dashboard-card">
+                <h3>Quick Stats</h3>
+                <div class="stats-mini">
+                    <div class="stat-mini-item">
+                        <span class="stat-label">Registration Status:</span>
+                        <span id="regStatus" class="stat-value">Pending</span>
+                    </div>
+                    <div class="stat-mini-item">
+                        <span class="stat-label">Progress:</span>
+                        <span id="progressValue" class="stat-value">0%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resources Card -->
+            <div class="dashboard-card">
+                <h3>Resources & Links</h3>
+                <ul class="resources-list">
+                    <li><a href="courses.html">View All Courses</a></li>
+                    <li><a href="profile.html">Edit Profile</a></li>
+                    <li><a href="contact.html">Get Help</a></li>
+                    <li><a href="about.html">About Program</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Action Section -->
+        <section class="action-section">
+            <h2>Next Steps</h2>
+            <div class="action-cards">
+                <div class="action-card">
+                    <h4>1. Register for Course</h4>
+                    <p>Choose and register for one industrial training course from our available options</p>
+                    <a href="courses.html" class="btn btn-primary">Explore Now</a>
+                </div>
+                <div class="action-card">
+                    <h4>2. Update Profile</h4>
+                    <p>Make sure your profile information is complete and up to date</p>
+                    <a href="profile.html" class="btn btn-primary">Update Profile</a>
+                </div>
+                <div class="action-card">
+                    <h4>3. Connect with Trainer</h4>
+                    <p>Once registered, your trainer will reach out with schedule details</p>
+                    <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 KEC-GUVI Industrial Training Program. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/validation.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
